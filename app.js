@@ -19,7 +19,6 @@ app.set('view options', {
 app.use(asset(publicDir));
 app.use(express.static(publicDir));
 
-app.get('/guides', routes.guides);
 app.get('/guides/*', routes.md);
 app.get('/documentation', routes.documentation);
 app.get('/documentation/bundles', routes.bundles);
@@ -38,7 +37,7 @@ app.get('/examples', routes.examples);
 app.get('/about', routes.about);
 app.get('/search', routes.search);
 app.get('/challenge', routes.challenge);
-app.get('/oskari', routes.oskari);
+app.get('/contributing', routes.contributing);
 // new api doc end points
 app.get('/api', routes.apiSelection);
 app.get('/api/bundles', routes.bundlesPage);

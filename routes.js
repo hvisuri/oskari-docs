@@ -167,7 +167,7 @@ module.exports = {
         apidocs.doc(ver, bundle, callback);
     },
     about: function (req, res) {
-        res.render('about', getBreadCrumbOptions('about'));
+        res.render('about', getBreadCrumbOptions('about oskari'));
     },
     bundles: function (req, res) {
         readBundleDir(function (files) {
@@ -184,9 +184,6 @@ module.exports = {
             });
         });
     },
-    guides: function (req, res) {
-        res.render('guides', getBreadCrumbOptions('guides'));
-    },
     documentation: function (req, res) {
         res.render('documentation', getBreadCrumbOptions('documentation'));
     },
@@ -196,8 +193,8 @@ module.exports = {
     challenge: function (req, res) {
         res.render('challenge', getBreadCrumbOptions('challenge'));
     },
-    oskari: function (req, res) {
-        res.render('oskari', getBreadCrumbOptions('oskari'));
+    contributing: function (req, res) {
+        res.render('contributing', getBreadCrumbOptions('contributing'));
     },
     search: function (req, res) {
         var q = req.param('q');
