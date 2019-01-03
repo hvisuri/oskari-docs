@@ -3,18 +3,24 @@ extends layout
 block prelude
   div.frontpage-logobar
     div.container.landing-container
-      <img src="/images/oskari_logo_rgb.png" alt="Oskari">
       div.row
-        div.col-md-8.col-md-offset-1.text-center
-          h1.landing
-            span. Oskari is a framework for easily building multipurpose web mapping applications utilizing distributed Spatial Data Infrastructures like INSPIRE.
-          <img src="/images/frontpage_example_desktop.png" class="landing-desktop-example" alt="mobile use">
-        div.col-md-3
-          <img src="/images/frontpage_example_mobile.png" class="landing-mobile-example" alt="mobile use">
+        h1.landing
+          span. Oskari is a framework for easily building multipurpose web mapping applications utilizing distributed Spatial Data Infrastructures like INSPIRE.
+      div.row
+        div.carousel.slide(id="carouselMain", data-ride="carousel")
+          ol.carousel-indicators
+            li.active(data-target="#carouselMain", data-slide-to="0")
+            li(data-target="#carouselMain", data-slide-to="1")
+            li(data-target="#carouselMain", data-slide-to="2")
+          div.carousel-inner(role="listbox")
+            div.item.active
+              <img alt="" class="first-slide carousel-image img-responsive" src="/images/paikkatietoikkuna.PNG">
+            div.item
+              <img alt="" class="second-slide carousel-image img-responsive" src="/images/frontpage_example_desktop.png">
+            div.item
+              <img alt="" class="third-slide carousel-image img responsive" src="/images/demo_oskari_org.PNG">
 
 block main
-
-  div.container
 
   div.container
     div.col-md-4
@@ -29,12 +35,11 @@ block main
         ## Open Source / contributing
         Oskari is developed openly on GitHub and code is released under Open Source Licenses (MIT/EUPL). Oskari uses standard Open Source components such as OpenLayers, GeoTools, GeoServer, Jackson and jQuery. [See contributing](/contributing) to get involved!
 
-    div.col-md-4
+    div.col-md-4.oskari-network
       :markdown
-        ## Deploying Oskari
-        Do you want to run your own Oskari instance or use an existing Oskari to embed a map to another website?
-
-        [Read more...](/documentation)
+        ## Oskari Network
+        #### Oskari Network is the stakeholder community of Oskari software. 
+        #### Visit [the website](http://community.oskari.org/) to read more about joint development on Oskari-software!
 
   <hr>
 
